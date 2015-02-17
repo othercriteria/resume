@@ -1,102 +1,105 @@
 \documentclass{article}
-%% Resume template for Brown's joint
-%% CareerLAB and Science Center LaTeX/Resume workshop
+% Starting with the following template:
+% 
+% Resume template for Brown's joint CareerLAB and Science Center
+% LaTeX/Resume workshop
+% (http://bit.ly/resumeTemplate)
 
-%% The template is based on the first
-%% example resume on the CareerLAB website, available here:
-%% http://brown.edu/campus-life/support/careerlab/sites/brown.edu.campus-life.support.careerlab/files/uploads/Resume%20Samples_0.pdf
-
-%% I commented this document liberally to help you understand
-%% what everything means and with the goal
-%% of empowering you to modify the template;
-%% feel free to remove the comments
-%% if you want a cleaner .tex file.
-
-
-%%%%%%%%%%%%%%
-%% Packages %%
-%%%%%%%%%%%%%%
-
-%% For changing the margin size. %%
+% Shrink margins
 \usepackage[margin=0.7in]{geometry}
 
-%% For colored text. %%
-% -  See http://en.wikibooks.org/wiki/LaTeX/Colors#The_68_standard_colors_known_to_dvips
-%    for a list of predefined colors.
-%    I'll explain how to color text.
-\usepackage[usenames,dvipsnames]{color}
-
-%% For providing a link to your email. %%
+% For hyperlinks
 \usepackage{hyperref}
 
-%% For making compact lists.
-% -  use itemize* environment for compact itemized lists, etc.
+% For making compact lists with itemize* environment
 \usepackage{mdwlist}
 
+% Fancy sections
+\newcommand{\ressection}[1]{\noindent{\large\textbf{#1}}\vspace{2pt}\hrule\vspace{4pt}}
 
+% For items with dates: \hfill fills up horizontal space until the
+% words to the left and the right are as far apart as possible
+\newcommand{\leftandright}[2]{\noindent\textbf{#1}\hfill\textbf{#2}}
 
-%%%%%%%%%%%%%%
-%%   New    %%
-%% Commands %%
-%%%%%%%%%%%%%%
-
-%% For making a new section in your resume. %%
-% -  \noindent prevents LaTeX from indenting.
-% -  \large makes the text slightly larger.
-%    See http://en.wikibooks.org/wiki/LaTeX/Fonts#Sizing_text
-%    for a list of other font-sizing commands.
-% -  \vspace adds a little bit of vertical space.
-% -  \hrule adds a horizontal line.
-\newcommand{\ressection}[1]{\noindent{\large\textbf{#1}}
-\vspace{2pt}\hrule\vspace{4pt}}
-
-%% For job titles and date names. %%
-% -  \hfill fills up horizontal space until
-%    the words to the left and the right are
-%    as far apart as possible.
-\newcommand{\leftandright}[2]{\noindent\textbf{#1}\hfill
-\textbf{#2}}
-
-
-
-%%%%%%%%%%%%%%%%%%%
-%% Miscellaneous %%
-%%%%%%%%%%%%%%%%%%%
-
-\pagestyle{empty} %% removes the page numbers.
-
-
-
-%%%%%%%%%%%%%%%%%
-%% The Resume! %%
-%%%%%%%%%%%%%%%%%
+% Remove page numbering
+\pagestyle{empty}
 
 \begin{document}
 
+%% Change font family
+\sffamily
+
 \begin{center}
-\textbf{\huge{Josiah Carberry}}
+\textbf{\huge{Daniel L. Klein}}
 
-\href{mailto:josiah_carberry@brown.edu}{josiah_carberry@brown.edu}
-\textbullet\, (401) 863-3326
+web: \href{http://mesokurtosis.com}{mesokurtosis.com}
+\textbullet\, github: \href{https://gititbub.com/othercriteria}{othercriteria}
+\textbullet\, email: \href{mailto:daniel_klein@brown.edu}{daniel\_klein@brown.edu}
+\textbullet\, cell: 952.454.4197
 \end{center}
-\vspace{-0.9em}
-
 
 \ressection{Education}
-\leftandright{Brown University, \textmd{B.A. Music}}{Providence, RI \textbullet\, Class of 2013} \\
-\ressection{Digital Media Experience}
-\leftandright{Brown University CareerLAB}{Providence, RI \textbullet\, October 2013 -- Present} \\
-Provides career advice, workshops, planning, and coaching to Brown Students.\\[0.1em]
-\vspace{-0.8em}
-\textit{Social Media Manager} 
+
+\leftandright{Brown University, \textmd{Ph.D. Applied
+    Mathematics}}{May, 2015 (anticipated)}
+\begin{itemize*}
+\item TAing
+\item MRC
+\item Research
+\end{itemize*}
+
+\leftandright{Williams College, \textmd{B.A. in Mathematics and
+    Biology}}{May, 2006}
+
+\vspace{1.0em}
+
+\ressection{Work experience}
+
+\leftandright{Williams College, Dept.\ of Biology}{Williamstown, MA
+  \textbullet\, June -- August 2005} \\
+\textit{Research Assistant}
+
+\begin{itemize*}
+\item asdf
+\end{itemize*}
+
+\leftandright{University of Minnesota, Dept.\ of Ecology and
+  Evolutionary Biology}{Saint Paul, MN \textbullet\, June -- August
+  2004} \\
+\textit{Research Intern (NSF supported)}
+
+\leftandright{University of Minnesota, Dept.\ of Ecology and
+  Evolutionary Biology}{Saint Paul, MN \textbullet\, June -- August
+  2003} \\
+\textit{Research Intern}
+\begin{itemize*}
+\item asdf
+\end{itemize*}
+
+\vspace{1.0em}
+
+\ressection{Relevant coursework}
+
 \begin{itemize*}
 \item
-Developed long-term social media strategy for Twitter and Facebook.
-\item 
-Analyzed success of Twitter engagement through follower counts and link-tracking to inform strategic decisions
-\item 
-Evaluated and reframed career content for students on Twitter, increasing follower count by 4\% per month.
-\item 
-Wrote and presented curriculum on using Twitter for job searches to students and professional career advisors.
 \end{itemize*}
+
+\vspace{1.0em}
+
+\ressection{Programming}
+
+\begin{itemize*}
+\item Python, R, C/C++, Matlab, Haskell, Scheme, Java.
+\item Experience with standard statistics, numerics, and
+  visualization packages.
+\item Comfortable with software engineering stack (UNIX, git/svn,
+  make, etc.).
+\end{itemize*}
+
+\vspace{1.0em}
+
+\ressection{Miscellaneous}
+
+\noindent US citizen, no prior convictions.
+
 \end{document}
