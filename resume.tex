@@ -8,6 +8,10 @@
 % Shrink margins
 \usepackage[margin=0.7in]{geometry}
 
+% Itemize spacing
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep, topsep=0.4em}
+
 % For hyperlinks
 \usepackage{hyperref}
 
@@ -35,12 +39,23 @@
 web: \href{http://mesokurtosis.com}{mesokurtosis.com}
 \textbullet\, github: \href{https://github.com/othercriteria}{othercriteria}
 \textbullet\, email: \href{mailto:othercriteria@gmail.com}{othercriteria@gmail.com}
-\textbullet\, cell: 952.454.4197
+\textbullet\, cell: 415.763.0415
 \end{center}
 
 \ressection{Work experience}
 
-\leftandright{RealScout}{October 2016 -- November 2017} \\ \textit{Data Scientist}
+\leftandright{DMG Blockchain Solutions (Blockseer)}{July 2018 -- present} \\
+\textit{Senior Software Engineer}
+
+\begin{itemize*}
+\item Led rewrite of Bitcoin address clustering pipeline (EMR, Scala,
+  GraphX); 1.2 TB blockchain processed in $\sim$6 hours.
+\item Developed and validated Bitcoin transaction classification
+  method using custom DeepWalk implementation.
+\end{itemize*}
+
+\leftandright{RealScout}{October 2016 -- November 2017} \\
+\textit{Data Scientist}
 
 \begin{itemize*}
 \item Led development of Recommended Listing feature: data exploration
@@ -50,8 +65,6 @@ web: \href{http://mesokurtosis.com}{mesokurtosis.com}
 \item Automated schema mapping for ETL of external listing databases
   (MLS) using a predictive model (gradient boosting) built on data
   and metadata features and trained on manually matched schemata.
-\item Answered general business intelligence and ops questions which
-  required non-trivial amounts of SQL.
 \item Built out Bayesian models for sales price and days-on-market
   prediction with near-Zillow/Redfin accuracy.
 \end{itemize*}
@@ -79,16 +92,13 @@ web: \href{http://mesokurtosis.com}{mesokurtosis.com}
 \end{itemize*}
 
 \leftandright{University of Minnesota, Dept.\ of Ecology and
-  Evolutionary Biology}{June -- August 2003, 2004} \\
+  Evolutionary Biology}{June -- August 2003, June -- August 2004} \\
 \textit{Research Intern}
 
 \begin{itemize*}
 \item Developed and analyzed numerical results from novel model for ecological
   community assembly model.
-\item Participated in field work, data collection, and data entry.
 \end{itemize*}
-
-\vspace{1.0em}
 
 \ressection{Education}
 
@@ -105,14 +115,27 @@ web: \href{http://mesokurtosis.com}{mesokurtosis.com}
 \end{itemize*}
 
 \leftandright{Williams College, \textmd{B.A.\ Mathematics and
-    Biology}}{June, 2006}
+    Biology}}{June 2006}
 \begin{itemize*}
 \item Departmental honors in Biology, with thesis ``Understanding
   aggregation in the membracid \emph{Publilia concava}: using models
   to disentangle processes''.
 \end{itemize*}
 
-\vspace{1.0em}
+\ressection{Languages, stacks, competencies}
+
+\begin{itemize*}
+\item Enthusiastic: Python (mypy typing!), R, C, SQL. Grudging:
+  JavaScript, Matlab. Exploring: Rust, Haskell.
+\item Statistics, numerics, and visualization libraries:
+  numpy/scipy/pandas/scikit-learn, TensorFlow, Stan, PyMC3, D3, etc.
+\item Familiarity with software engineering tooling (git, build
+  systems, CI, etc.), web development (client-server, HTML, CSS,
+  Hakyll, etc.), and cloud deployment (Docker, AWS, etc.), distributed
+  computing (Hadoop, Spark, etc.).
+\item Product mindset (quantifying and measuring value creation,
+  growth modeling, UX design, product management).
+\end{itemize*}
 
 \ressection{Relevant coursework}
 
@@ -120,24 +143,11 @@ web: \href{http://mesokurtosis.com}{mesokurtosis.com}
 \item Foundational computer science, e.g., Data Structures,
   Design/Analysis of Algorithms, and Programming Languages.
 \item Bayesian Stats, Biostats, graduate Math Stats I/II, graduate
-  Probability/Stochastics, Recent Applications in Probability and Statistics.
-\item Seminars in Graphical Models and in Bayesian Nonparameterics.
-\item Several courses in Computational Biology, covering use of
-  dynamic programming and approximation algorithms to efficiently
-  learn structural features from messy, incomplete, and/or inconsistent data.
-\end{itemize*}
-
-\vspace{1.0em}
-
-\ressection{Programming and technical comfort}
-
-\begin{itemize*}
-\item Enthusiastic: Python, R, C, SQL. Grudging: JavaScript, Matlab.
-\item Statistics, numerics, and visualization libraries:
-  numpy/scipy/pandas/scikit-learn, TensorFlow, Stan, PyMC3, D3, etc.
-\item Familiarity with software engineering tooling (git, build
-  systems, CI, etc.), web development (client-server, HTML, CSS,
-  Hakyll, etc.), and cloud deployment (Docker, AWS, etc.).
+  Probability/Stochastics.
+\item Seminars in Graphical Models, Bayesian Nonparameterics, Network Models.
+\item Computational Biology, covering use of dynamic programming and
+  approximation algorithms to efficiently learn structural features
+  from messy, incomplete, and/or inconsistent data.
 \end{itemize*}
 
 \end{document}
