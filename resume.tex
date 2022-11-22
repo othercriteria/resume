@@ -5,6 +5,22 @@
 % LaTeX/Resume workshop
 % (http://bit.ly/resumeTemplate)
 
+% Allow picking fonts
+\usepackage{fontspec}
+\usepackage[slantfont, boldfont]{xeCJK}
+
+% Chinese
+\setCJKmainfont{HanaMinA}
+\setCJKsansfont{HanaMinA}
+\setCJKmonofont{HanaMinA}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt
+
+% English
+\setmainfont[Ligatures=TeX]{Latin Modern Roman}
+\setsansfont[Ligatures=TeX]{TeX Gyre Heros}
+\setmonofont[Ligatures=TeX]{Berkeley Mono}
+
 % Shrink margins
 \usepackage[margin=0.7in]{geometry}
 
@@ -33,57 +49,68 @@
 %% Change font family
 \sffamily
 
+\noindent
 \begin{center}
-\textbf{\huge{Daniel~L.~Klein}}
+    
+\textbf{\huge{Daniel~Klein 微担意}}
 
-web: \href{http://mesokurtosis.com}{mesokurtosis.com}
-\textbullet\, github: \href{https://github.com/othercriteria}{othercriteria}
-\textbullet\, email: \href{mailto:othercriteria@gmail.com}{othercriteria@gmail.com}
-\textbullet\, cell: 415.763.0415
+web: \href{http://mesokurtosis.com}{\texttt{mesokurtosis.com}}
+\textbullet\,
+github: \href{https://github.com/othercriteria}{\texttt{othercriteria}}
+\textbullet\,
+email: \href{mailto:daniel.l.klein@proton.me}{\texttt{daniel.l.klein@proton.me}}
+\textbullet\,
+\texttt{952.454.4197}
+
 \end{center}
 
-\ressection{Work experience}
+\ressection{Experience}
 
-\leftandright{DMG Blockchain Solutions (Blockseer)}{July 2018 -- present} \\
+\leftandright{Oracle Corporation (Advertising and Customer Experience, Moat)}{2019 -- present} \\
+\textit{Principal Data Scientist}
+
+\begin{itemize*}
+\item Develop and maintain streaming pipelines for Invalid Traffic
+  detection, consuming $\sim$100,000 events / sec.
+\item Ensure use of appropriate data- and statistics-driven methods
+  within-team, cross-team, and externally.
+\end{itemize*}
+
+\leftandright{DMG Blockchain Solutions (Blockseer)}{2018 -- 2019} \\
 \textit{Senior Software Engineer}
 
 \begin{itemize*}
-\item Led rewrite of Bitcoin address clustering pipeline (EMR, Scala,
-  GraphX); 1.2 TB blockchain processed in $\sim$6 hours.
-\item Developed and validated Bitcoin transaction classification
-  method using custom DeepWalk implementation.
+\item Led rewrite of Bitcoin address clustering (EMR, Scala, GraphX);
+  1.2 TB blockchain processed in $\sim$6 hours.
+\item Validated novel Bitcoin transaction classification method using
+  custom DeepWalk implementation.
 \end{itemize*}
 
-\leftandright{RealScout}{October 2016 -- November 2017} \\
+\leftandright{RealScout}{2016 -- 2017} \\
 \textit{Data Scientist}
 
 \begin{itemize*}
-\item Led development of Recommended Listing feature: data exploration
-  $\rightarrow$ agent-agent modeling $\rightarrow$ architecture plan
-  $\rightarrow$ design mocks $\rightarrow$ user stories $\rightarrow$
-  implementation alongside engineers $\rightarrow$ deployment.
+\item Productionized insights from agent-agent modeling into
+  user-facing Recommended Listing feature.
 \item Automated schema mapping for ETL of external listing databases
-  (MLS) using a predictive model (gradient boosting) built on data
-  and metadata features and trained on manually matched schemata.
+  (MLS) using gradient boosting match model.
 \item Built out Bayesian models for sales price and days-on-market
   prediction with near-Zillow/Redfin accuracy.
 \end{itemize*}
 
-\leftandright{Radius Intelligence, RealScout, Neighborly (rotations)}{June -- August 2016} \\
+\leftandright{Radius Intelligence, RealScout, Neighborly (rotations)}{2016} \\
 \textit{Data Science apprentice (Catenus, 8VC)} \\
 
-\leftandright{TransForm Pharmaceuticals, Inc.}{September 2006 -- August 2008} \\
+\leftandright{TransForm Pharmaceuticals, Inc.}{2006 -- 2008} \\
 \textit{Assistant Scientist, Scientific Computation}
 
 \begin{itemize*}
-\item Developed and deployed data integration software for laboratory
-  automation platforms (HPLC, IR, spectrophotometer).
-\item Rapidly implemented ideas into software to support data
-  analysis, molecular modeling, analytical chemistry method
-  development, platform QA, etc.
+\item Delivered tooling to support computational chemistry research
+  and data integration (HPLC, IR, UV-Vis) for lab automation
+  platforms.
 \end{itemize*}
 
-\leftandright{Williams College, Dept.\ of Biology}{June -- August 2005} \\
+\leftandright{Williams College, Dept.\ of Biology}{2005} \\
 \textit{Research Assistant}
 
 \begin{itemize*}
@@ -92,7 +119,7 @@ web: \href{http://mesokurtosis.com}{mesokurtosis.com}
 \end{itemize*}
 
 \leftandright{University of Minnesota, Dept.\ of Ecology and
-  Evolutionary Biology}{June -- August 2003, June -- August 2004} \\
+  Evolutionary Biology}{2003, 2004} \\
 \textit{Research Intern}
 
 \begin{itemize*}
@@ -103,28 +130,42 @@ web: \href{http://mesokurtosis.com}{mesokurtosis.com}
 \ressection{Education}
 
 \leftandright{Brown University, \textmd{Ph.D. Applied
-    Mathematics}}{October 2016 (defended)}
+    Mathematics}}{2008 -- 2016 (defended)}
 \begin{itemize*}
 \item Advised by \href{http://www.dam.brown.edu/people/harrison}{Matt
-    Harrison}, with research focus on statistical inference in
-  settings of extreme data sparsity or imbalance.
+  Harrison}; research on statistical inference in settings of extreme
+  data sparsity or imbalance.
 \item TA for Intro Stats, Math Stats I/II, Recent Applications in
   Probability and Statistics.
-\item Organized and hosted speaker visits and meetings for Pattern
-  Theory seminar.
 \end{itemize*}
 
 \leftandright{Williams College, \textmd{B.A.\ Mathematics and
-    Biology}}{June 2006}
+    Biology}}{2006}
 \begin{itemize*}
 \item Departmental honors in Biology, with thesis ``Understanding
   aggregation in the membracid \emph{Publilia concava}: using models
   to disentangle processes''.
 \end{itemize*}
 
-\ressection{Languages, stacks, competencies}
+\ressection{Relevant coursework}
 
 \begin{itemize*}
+\item Foundational CS: Data Structures, Algorithm Design/Analysis, PL,
+  PL Theory.
+\item Bayesian Stats, Biostats, graduate Math Stats I/II, graduate
+  Probability/Stochastics.
+\item Seminars in Graphical Models, Bayesian Nonparametrics, Network
+  Models.
+\item Computational Biology: dynamic programming, approximation
+  algorithms, HMMs, etc.
+\end{itemize*}
+
+\ressection{Value over replacement player / comparative advantage}
+
+\noindent Beyond standard
+
+\begin{itemize*}
+
 \item Enthusiastic: Python(+mypy), R, C/C++, SQL. Grudging:
   JavaScript, Matlab, Scala. Exploring: Rust, Haskell.
 \item Statistics, numerics, and visualization libraries:
@@ -135,20 +176,6 @@ web: \href{http://mesokurtosis.com}{mesokurtosis.com}
   computing (Hadoop, Spark, etc.).
 \item Product mindset (quantifying and measuring value creation,
   growth modeling, UX design, product management).
-\end{itemize*}
-
-\ressection{Relevant coursework}
-
-\begin{itemize*}
-\item Foundational computer science, e.g., Data Structures,
-  Design/Analysis of Algorithms, and Programming Languages.
-\item Bayesian Stats, Biostats, graduate Math Stats I/II, graduate
-  Probability/Stochastics.
-\item Seminars in Graphical Models, Bayesian Nonparametrics, Network
-  Models.
-\item Computational Biology, covering use of dynamic programming and
-  approximation algorithms to efficiently learn structural features
-  from messy, incomplete, and/or inconsistent data.
 \end{itemize*}
 
 \end{document}
